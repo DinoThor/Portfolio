@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import CustomNavbar from './components/navbar/Navbar';
 import Header from './components/header/Header';

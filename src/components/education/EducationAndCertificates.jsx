@@ -1,13 +1,12 @@
 function EducationAndCertificates() {
   return(
     <section id="YouEducationYourFather">
-      <div className='container mx-auto flex px-10 py-10 md:flex-row flex-col justify-around py-10'>
-        <div className="flex flex-column lg:bg-gray-700 lg:p-4 m-2 rounded-2xl">
-          <h1 className="mb-10 lg:text-start text-center">
+      <div className='container mx-auto flex lg:flex-row flex-col px-10 justify-around py-10'>
+        <div className="flex flex-col lg:bg-gray-700 lg:p-4 m-1 rounded-2xl">
+          <h1 className="my-5 text-center font-bold text-2xl">
             Education
           </h1>
-          <div className="flex flex-column bg-gray-600 p-3 rounded-2xl">
-
+          <div className="flex flex-col bg-gray-600 p-3 rounded-2xl">
             <e className="font-mono font-bold text-lg">
               Bachelor in Computer Science
             </e>
@@ -27,12 +26,11 @@ function EducationAndCertificates() {
           </div>
 
         </div>
-        <div className="flex flex-column lg:bg-gray-700 lg:p-4 m-2 rounded-2xl">
-          <h1 className="mb-10 lg:text-start text-center">
+        <div className="flex flex-col lg:bg-gray-700 lg:p-4 mx-1 rounded-2xl">
+          <h1 className="my-5 text-center items-center font-bold text-2xl">
             Certificates
           </h1>
-          <div className="flex flex-column bg-gray-600 p-3 rounded-2xl">
-
+          <div className="flex flex-col bg-gray-600 p-3 rounded-2xl">
             <e className="font-mono font-bold text-lg">
               JavaScript Algorithms and Data Structures
             </e>
@@ -42,13 +40,10 @@ function EducationAndCertificates() {
               className="font-mono font-bold text-sm no-underline">
               freeCodeCamp
             </a>
-
             <e className="font-mono font-bold my-2">
               June 2022 // 300h
             </e>
           </div>
-
-
         </div>
       </div>
     </section>
