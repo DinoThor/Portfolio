@@ -1,10 +1,8 @@
-import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-import CustomNavbar from './components/navbar/Navbar';
+// import './App.css';
 import Header from './components/header/Header';
 import EducationAndCertificates from './components/education/EducationAndCertificates';
 import Skills from './components/skills/Skills';
+import Experience from './components/experience/Experience';
 
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
       <Header/>
       <EducationAndCertificates/>
       <Skills/>
+      <Experience/>
     </main>
   );
 }

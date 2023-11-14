@@ -1,39 +1,59 @@
 import React, { useState, useEffect } from 'react';
 
+const phrases = [
+  "Software Developer",
+  "Data Scientist",
+  "Cloud Engineer"
+]
 
-
-function AnimatedWriter({text, delay}) {
+function AnimatedWriter({ text, delay }) {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phraseIndex, setPhraseIndex] = useState(0);
+  const [phraseTimer, setPhraseTimer] = useState(0);
 
-  const flicker = () => {
-    const timeout = setTimeout(() => {
-      if (currentText.slice(-1) == '_') {
-        setCurrentText(prevText => prevText.slice(0, -1) + ' ');
-        return () => clearTimeout(timeout);
-      }
-        setCurrentText(prevText => prevText.slice(0, -1) + '_');
-        return () => clearTimeout(timeout);
-    }, delay);
-  }
+  const [flicker, setFlicker] = useState(1);
 
   useEffect(() => {
-      const timeout = setTimeout(() => {
-        if (currentIndex < text.length) {
-          setCurrentText(prevText => prevText + text[currentIndex]);
+    const timeout = setTimeout(() => {
+      // Delete
+      if (phraseTimer === -1 || phraseTimer < delay * 30) {
+        if (phraseTimer === -1) {
+          setPhraseTimer(0);
+          setFlicker(1);
+          return;
+        }
+        if (currentIndex < phrases[phraseIndex].length) {
+          setCurrentText(prevText => prevText + phrases[phraseIndex][currentIndex]);
+          setCurrentIndex(prevIndex => prevIndex + 1);
+          setPhraseTimer(phraseTimer => phraseTimer + delay);
+          setFlicker(1);
         }
         else {
-          flicker();
+          setFlicker(flicker === 1 ? 0 : 1);
+          setPhraseTimer(phraseTimer => phraseTimer + delay);
         }
-        setCurrentIndex(prevIndex => prevIndex + 1);
-      }, currentIndex < text.length ? delay : delay * 3);
-  
-      return () => clearTimeout(timeout);
-  }, [currentText]);
+      }
+      // Write
+      else
+        if (currentIndex > 0) {
+          setCurrentText(prevText => prevText.slice(0, -1));
+          setCurrentIndex(prevIndex => prevIndex - 1);
+        }
+        else {
+          setPhraseIndex((phraseIndex + 1) % phrases.length);
+          setPhraseTimer(-1);
+        }
+    }, delay);
 
-  return(
-    <span>$ {currentText}</span>
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <span>
+      $ {currentText}
+      <span style={{ opacity: flicker }}>_</span>
+    </span>
   )
 }
 
