@@ -4,7 +4,7 @@ import ExternalLink from "../ExternalLink";
 function EducationAndCertificates() {
   return (
     <section id="YouEducationYourFather">
-      <div className='container mx-auto flex lg:flex-row flex-col justify-around py-10 text-center'>
+      <div className='container lg:mx-auto mx-2 flex lg:flex-row flex-col justify-around py-10 text-center'>
         <div className="flex flex-col lg:bg-bluegray-700 lg:p-5 lg:mr-1 rounded-2xl lg:w-1/2">
           <h1 className="my-5 font-bold text-2xl">
             Education
