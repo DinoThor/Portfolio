@@ -2,7 +2,7 @@ import Divider from '../divider/Divider';
 
 const Item = ({ position, company, webpage, startDate, endDate, sumary }) => {
   return (
-    <div className='flex-col bg-gray-700 md:p-10 p-5 mb-5 w-full rounded-2xl'>
+    <div className='flex-col bg-bluegray-700 md:p-10 p-5 mb-5 w-full rounded-2xl'>
       <div className='flex md:flex-row flex-col items-center'>
         <h1 className='md:text-3xl text-2xl font-mono font-bold text-center'>
           {position + ' '}
@@ -47,7 +47,7 @@ function Experience() {
           />
           <Item
             company={'VRAIN'}
-            position={'IA Researcher'}
+            position={'AI Researcher'}
             startDate={'November 2022'}
             endDate={'June 2023'}
             webpage={'https://vrain.upv.es/'}

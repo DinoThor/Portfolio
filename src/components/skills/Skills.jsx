@@ -3,7 +3,7 @@ import Divider from '../divider/Divider';
 
 const checkedLabel = (label) => {
   return (
-    <div className='flex flex-row items-center bg-gray-700 my-1 p-5 rounded-md'>
+    <div className='flex flex-row items-center bg-bluegray-700 my-1 p-5 rounded-md'>
       <BsFillCheckCircleFill
         color='green'
         size={30}
