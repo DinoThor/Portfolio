@@ -1,6 +1,8 @@
+import React from 'react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import profPic from '../../res/images/profpic.png'
+import profPic from './profpic.png'
 import AnimatedWriter from '../animatedWriter/AnimatedWriter';
+
 
 function Header() {
   return (
@@ -12,7 +14,7 @@ function Header() {
               Aarón
             </h1>
             <b className='font-mono sm:text-2xl mb-4 text-white align-start'>
-              <AnimatedWriter text={"Software Developer"} delay={75}/>
+              <AnimatedWriter delay={75}/>
             </b>
 
             <div className="flex justify-center">

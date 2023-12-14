@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-const phrases = [
-  "Software Developer",
-  "Data Scientist",
-  "Cloud Engineer",
-  "AI enthusiast"
-]
+const phrases: String[] =
+  [
+    "Software Developer",
+    "Data Scientist",
+    "Cloud Engineer",
+    "AI enthusiast"
+  ]
 
-function AnimatedWriter({ text, delay }) {
-  const [currentText, setCurrentText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [phraseTimer, setPhraseTimer] = useState(0);
+function AnimatedWriter({ delay }: { delay: number }) {
+  const [currentText, setCurrentText] = useState<string>('');
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [phraseIndex, setPhraseIndex] = useState<number>(0);
+  const [phraseTimer, setPhraseTimer] = useState<number>(0);
 
   const [flicker, setFlicker] = useState(1);
 
