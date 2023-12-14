@@ -1,52 +1,38 @@
+import CertificationCarousel from "../carousel/Carousel";
+import ExternalLink from "../ExternalLink";
+
 function EducationAndCertificates() {
   return (
     <section id="YouEducationYourFather">
-      <div className='container mx-auto flex lg:flex-row flex-col px-10 justify-around py-10'>
-        <div className="flex flex-col lg:bg-gray-700 lg:p-5 m-1 rounded-2xl">
-          <h1 className="my-5 text-center font-bold text-2xl">
+      <div className='container lg:mx-auto px-5 flex lg:flex-row flex-col justify-around py-10 text-center'>
+        <div className="flex flex-col lg:bg-bluegray-700 lg:p-5 lg:mr-1 rounded-2xl lg:w-1/2">
+          <h1 className="my-5 font-bold text-2xl">
             Education
           </h1>
-          <div className="flex flex-col bg-gray-600 p-3 rounded-2xl">
+          <div className="flex flex-col border-2 p-3 rounded-2xl">
             <e className="font-mono font-bold text-lg">
               Bachelor in Computer Science
             </e>
             <e text-sm className="font-mono text-sm">
-              Specialization in Algorithms, Data Science & Machine Learning
+              Algorithms, Data Science & Machine Learning
             </e>
-
             <e className="font-mono font-bold mt-2">
               2019 - 2023
             </e>
             <e className="font-mono font-bold">
               GPA: 7/10
             </e>
-            <a
-              href="https://www.upv.es/titulaciones/GII/index-en.html"
-              target="_blank"
-              className="font-mono font-bold text-sm text-blue">
-              Universitat Politècnica de València
-            </a>
+            <ExternalLink
+              title={'Universitat Politècnica de València'}
+              url={'https://www.upv.es/titulaciones/GII-A/index-en.html'} />
           </div>
 
         </div>
-        <div className="flex flex-col lg:bg-gray-700 lg:p-4 m-1 rounded-2xl">
-          <h1 className="my-5 text-center items-center font-bold text-2xl">
+        <div className="flex flex-col lg:bg-bluegray-700 lg:ml-1 lg:w-1/2 w-full lg:h-1/2 rounded-2xl"> {/*lg:p-4 m-1 */}
+          <h1 className="lg:my-5 mt-10 text-center items-center font-bold text-2xl">
             Certificates
           </h1>
-          <div className="flex flex-col bg-gray-600 p-3 rounded-2xl">
-            <e className="font-mono font-bold text-lg">
-              JavaScript Algorithms and Data Structures
-            </e>
-            <e className="font-mono font-bold mt-2">
-              June 2022 (300h)
-            </e>
-            <a
-              href="https://www.freecodecamp.org/certification/fcc8681eb69-57e2-4ab3-90da-7d9161b4e622/javascript-algorithms-and-data-structures"
-              target="_blank"
-              className="font-mono font-bold text-sm no-underline">
-              freeCodeCamp
-            </a>
-          </div>
+          <CertificationCarousel />
         </div>
       </div>
     </section>
